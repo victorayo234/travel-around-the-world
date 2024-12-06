@@ -1,0 +1,627 @@
+@import url("https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gilda+Display&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Brand-600: #25a59e;
+  --Neutral-700: #595959;
+  --Neutral-900: #262626;
+  --Neutral-600: #737373;
+  --White-100: #fff;
+  --Gilda-Display: "Gilda Display", sans-serif;
+  --Urbanist: "Urbanist", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  margin-top: 31px;
+}
+
+.header {
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  display: flex;
+}
+
+.top-text {
+  color: var(--Brand-600);
+  font-family: "Gilda Display";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.8px;
+}
+
+/* hero section  */
+
+.travel-section {
+  width: 75%;
+  margin: 100px auto 0;
+}
+
+.travel-content h1 {
+  color: var(--Neutral-900);
+  font-family: var(--Gilda-Display);
+  font-weight: 300;
+  font-size: 10vw;
+  line-height: 100%;
+  text-align: center;
+}
+.travel-content h1 span {
+  color: var(--Brand-600);
+}
+
+.travel-image {
+  position: relative; /* Ensure the blur applies to the container */
+}
+
+.travel-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--Brand-600);
+  filter: blur(200px);
+  z-index: -1; /* Push the blur behind the image */
+}
+
+.travel-image img {
+  width: 100%;
+  position: relative; /* Ensure the image stays above the blur */
+  z-index: 1;
+}
+
+.travel-agent-text {
+  background-color: var(--Brand-600);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+  width: 85%;
+  gap: 30px;
+}
+
+.travel-agent-text p {
+  color: rgb(255, 255, 255);
+  font-family: var(--Urbanist);
+  font-size: 18px;
+  font-weight: 600;
+  width: 45%;
+}
+.travel-agent-text .lines {
+  width: 1px;
+  height: 60px;
+  background-color: lightgray;
+}
+.travel-agent-text h4 {
+  color: var(--White-100);
+  text-align: center;
+  font-family: "Gilda Display";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+/* destination section */
+
+.destination {
+  width: 100%;
+  padding-top: 100px;
+  margin: 0 auto;
+}
+.destination-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.destination-content h2 {
+  font-size: 72px;
+  font-weight: 400;
+  font-family: var(--Gilda-Display);
+}
+
+.search p {
+  font-size: 18px;
+  color: var(--Neutral-700);
+  font-family: var(--Urbanist);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.destination-content h2 {
+  font-size: 72px;
+  color: var(--Neutral-900);
+  font-family: var(--Gilda-Display);
+}
+
+.destination-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  /* width: 100%; */
+  margin: 0 auto;
+}
+
+.places .location {
+  display: flex;
+  height: 404px;
+  padding: 16px 16px 36px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  flex: 1 0 0;
+  color: aqua;
+}
+
+.places-pics {
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 32px;
+}
+
+.places {
+  height: fit-content;
+  background-color: white;
+  padding: 16px 16px 36px 16px;
+  width: fit-content;
+  box-shadow: 105.45px 50.41px 78.04px 0px rgba(55, 54, 100, 0.05),
+    -55.45px 50.409px 98px 0px rgba(55, 54, 100, 0.04);
+}
+
+.places h6 {
+  font-size: 24px;
+  color: var(--Neutral-900);
+  font-family: var(--Urbanist);
+  margin-top: 28px;
+}
+
+.places .location {
+  width: 100%;
+  height: 200px;
+}
+
+.des {
+  margin-right: 8px;
+}
+
+.bottom {
+  display: flex;
+}
+
+/* why section */
+
+.why {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.why-content-first-part h2,
+.why-content-first-part p {
+  width: 60%;
+}
+
+.why-content-first-part h2 {
+  font-size: 72px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--Gilda-Display);
+  color: var(--Neutral-900);
+  font-weight: 400;
+}
+
+.why-content-first-part p {
+  font-size: 18px;
+  color: var(--Neutral-600);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.why-content-second-part {
+  display: flex;
+  gap: 30px;
+}
+
+.card {
+  width: 500px;
+  height: 350px;
+  border-top: 4px solid var(--Brand-600);
+  padding: 40px 32px 48px 32px;
+  margin-top: 60px;
+  box-shadow: 105.45px 50.41px 78.04px 0px rgba(55, 54, 100, 0.05),
+    -55.45px 50.409px 98px 0px rgba(55, 54, 100, 0.04);
+}
+
+.card h3 {
+  font-size: 40px;
+  font-family: var(--Gilda-Display);
+  margin-bottom: 32px;
+}
+
+.card p {
+  font-size: 18px;
+  color: var(--Neutral-600);
+  font-family: var(--Urbanist);
+  margin-bottom: 80px;
+}
+.card:hover {
+  background-color: var(--Brand-600);
+}
+.card:hover h3 {
+  color: var(--White-100);
+}
+.card:hover p {
+  color: var(--White-100);
+}
+
+/* memorable-section */
+
+.memorable {
+  /* width: 100%; */
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.memorable-section {
+  display: flex;
+  align-items: center;
+}
+
+.memorable-content {
+  width: 60%;
+}
+
+.memorable-content h2 {
+  font-size: 72px;
+  font-family: var(--Gilda-Display);
+  font-weight: 400;
+}
+
+.memorable-content h2 span {
+  color: var(--Brand-600);
+}
+
+.memorable-content p {
+  color: var(--Neutral-700);
+  font-family: var(--Urbanist);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.tee {
+  color: var(--Brand-600);
+}
+
+.nav-mem {
+  margin-top: 48px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  cursor: pointer;
+}
+
+.see-more {
+  background-color: var(--Brand-600);
+  color: var(--White-100);
+  text-align: right;
+  font-family: var(--Urbanist);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  padding: 16px 32px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.see-more :hover {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.Discover {
+  color: rgba(51, 51, 51, 0.8);
+  text-align: right;
+font-family: Urbanist;
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-decoration: none;
+border-bottom: 2px solid #333;
+}
+
+
+.memorable-image {
+  width: 40%;
+  width: 658px;
+  height: 485px;
+  flex-shrink: 0;
+  top: +20%;
+}
+
+/* watch section */
+
+.watch {
+  margin-top: 100px;
+}
+
+.watch-content h2 {
+  font-size: 72px;
+  color: var(--Neutral-900);
+  font-family: var(--Gilda-Display);
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 400;
+}
+
+.watch-image {
+  margin-top: 48px;
+  width: 100%;
+  height: 80vh;
+  background-image: url(./images/clouds-img.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* footer */
+
+footer {
+  margin-top: 100px;
+  width: 100%;
+}
+.footer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer-one {
+  display: flex;
+  margin-bottom: 48px;
+}
+
+.footer-one h2 {
+  font-size: 72px;
+  color: var(--Neutral-900);
+  font-family: var(--Gilda-Display);
+}
+
+.footer-one a {
+  padding: 16px 32px;
+  background-color: var(--Brand-600);
+  color: var(--White-100);
+  width: fit-content;
+  height: fit-content;
+  font-size: 17px;
+  margin-left: 480px;
+  text-decoration: none;
+}
+
+.long-line {
+  width: 1440px;
+  height: 1px;
+  color: #D9D9D9;
+}
+
+.footer-two {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-two-left {
+  width: 35%;
+}
+
+.footer-two-left img {
+  margin-top: ;
+}
+
+.arrow-up {
+  right: -85%;
+  position: relative;
+    background-color: #555;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+    padding: 28px;
+    margin-bottom: 60px;
+   box-shadow: 105.45px 50.41px 78.04px 0px rgba(55, 54, 100, 0.05),
+    -55.45px 50.409px 98px 0px rgba(55, 54, 100, 0.04);
+    
+}
+
+.arrow-up:hover {
+  background-color: #333;
+}
+
+.footer-two-left .best {
+  font-size: 18px;
+  color: var(--Neutral-700);
+  font-family: var(--Urbanist);
+  font-weight: 500;
+  margin-bottom: 48px;
+}
+
+/* .footer-two-right {
+
+} */
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--Neutral-700);
+  font-family: var(--Urbanist);
+  flex-direction: row;
+  display: inline;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
+
+.b-link {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+ .header {
+  width: 90%;
+ }
+
+ .travel-section {
+  width:90%
+ }
+
+ .travel-agent-text {
+  width: 95%;
+ }
+
+ .destination{
+  width: 90%;
+ }
+
+ .why{
+ width: 90%;
+}
+
+.memorable {
+  width: 90%;
+}
+
+.watch {
+  /* width: 100%; */
+}
+
+}
+
+
+@media screen and (max-width: 768px) {
+  /* destination-section  */
+ .destination-section {
+  display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .destination-content h2 {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .places-pics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+
+  /* why-section */
+  .why {
+
+  }
+
+  .why-content-first-part h2 {
+    font-size: 60px;
+  }
+
+  .why-content-second-part {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
+
+  /* .memorable-section */
+
+  .memorable-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .memorable-content h2 {
+   text-align: center;
+   margin: 0 auto;
+   font-size: 55px;
+  }
+
+  .memorable-content p {
+    text-align: center;
+   margin: 0 auto;
+  }
+
+  .nav-mem {
+    display: none;
+  }
+
+  /* watch-section */
+
+  .watch-content h2{
+   font-size: 60px;
+  }
+
+  /* footer */
+
+  .footer-one h2 {
+    font-size: 60px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .footer-one {
+    display: flex;
+    flex-direction: row;
+  }
+}
